@@ -19,7 +19,7 @@
       </repository>
       <repository>
          <id>CoreMem</id>
-         <url>http://dl.bintray.com/rtlib/CoreMem</url>
+         <url>http://dl.bintray.com/clearcontrol/ClearControl</url>
       </repository>
       <repository>
          <id>project.local</id>
@@ -35,7 +35,6 @@
          <url>http://clojars.org/repo</url>
       </repository>
    </repositories>
-                                                        
 
    <build>
        <plugins>
@@ -59,29 +58,6 @@
                    <downloadJavadocs>true</downloadJavadocs>
                </configuration>
            </plugin>
-            <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-install-plugin</artifactId>
-            <version>2.5.2</version>
-            <executions>
-                <execution>
-                    <id>hack-binary</id>
-                    <phase>validate</phase>
-                    <configuration>
-                       <file>${project.basedir}/repo/org/micromanager/MMJ_/2.0-SNAPSHOT/MMJ_-2.0-SNAPSHOT.jar</file>
-                        <repositoryLayout>default</repositoryLayout>
-                        <groupId>org.micromanager</groupId>
-                        <artifactId>MMJ_</artifactId>
-                        <version>2.0-SNAPSHOT</version>
-                        <packaging>jar</packaging>
-                        <generatePom>true</generatePom>
-                    </configuration>
-                    <goals>
-                        <goal>install-file</goal>
-                    </goals>
-                </execution>
-            </executions>
-        </plugin>
        </plugins>
    </build>
 
@@ -100,7 +76,7 @@
       <dependency>
          <groupId>net.coremem</groupId>
          <artifactId>CoreMem</artifactId>
-         <version>0.1.4</version>
+         <version>(,1.0.0]</version>
       </dependency>
       <dependency>
          <groupId>net.clearvolume</groupId>
@@ -110,7 +86,7 @@
       <dependency>
          <groupId>net.clearvolume</groupId>
          <artifactId>cleargl</artifactId>
-         <version>1.0.5</version>
+         <version>1.0.7</version>
       </dependency>
       <dependency>
          <groupId>net.clearvolume</groupId>
